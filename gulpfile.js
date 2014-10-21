@@ -3,6 +3,10 @@ var gulp = require('gulp'),
     slim = require('gulp-slim'),
     sass = require('gulp-ruby-sass'),
     plumber = require('gulp-plumber'),
+    mainBowerFiles = require('main-bower-files'),
+    filter = require('gulp-filter'),
+    concat = require('gulp-concat'),
+    uglify = require('gulp-uglify'),
     browserSync = require('browser-sync');
 
 // Helpers
@@ -38,6 +42,16 @@ gulp.task('slim', function() {
   .pipe(gulp.dest(dest.html))
   .pipe(reload({stream:true}));
 });
+
+// Process  javascripts
+gulp.task('js', function() {
+  gulp.src(mainBowerFiles().concat(src.js))
+  .pipe(filter('*.js'))
+  .pipe(concat('main.js'))
+  .pipe(uglify())
+  .pipe(gulp.dest(dest.js))
+  .pipe(reload({stream:true}));
+})
 
 // Spin up a server
 gulp.task('serve', function() {
