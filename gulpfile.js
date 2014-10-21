@@ -6,6 +6,9 @@ var gulp = require('gulp'),
     mainBowerFiles = require('main-bower-files'),
     filter = require('gulp-filter'),
     concat = require('gulp-concat'),
+    rename = require('gulp-rename'),
+    minifycss = require('gulp-minify-css'),
+    autoprefix = require('gulp-autoprefixer'),
     uglify = require('gulp-uglify'),
     browserSync = require('browser-sync');
 
