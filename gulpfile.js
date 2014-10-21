@@ -6,6 +6,9 @@ var gulp = require('gulp'),
     mainBowerFiles = require('main-bower-files'),
     filter = require('gulp-filter'),
     concat = require('gulp-concat'),
+    rename = require('gulp-rename'),
+    minifycss = require('gulp-minify-css'),
+    autoprefix = require('gulp-autoprefixer'),
     uglify = require('gulp-uglify'),
     browserSync = require('browser-sync');
 
@@ -14,7 +17,7 @@ var reload = browserSync.reload;
 
 //Paths
 var src = {
-  'css': './lib/styles/**/*.scss',
+  'css': './lib/styles/*.scss',
   'js': './lib/js/**/*.js',
   'html':'./lib/templates/*.slim'
 };
@@ -29,6 +32,9 @@ gulp.task('sass', function() {
   gulp.src(src.css)
   .pipe(plumber())
   .pipe(sass())
+  .pipe(autoprefix('last 2 version'))
+  .pipe(rename({ suffix: '.min' }))
+  .pipe(minifycss())
   .on('error', function (err) { console.log(err.message); })
   .pipe(gulp.dest(dest.css))
   .pipe(reload({stream:true}));
@@ -63,7 +69,8 @@ browserSync({
 });
 
 // Default to build, serve, and watch
-gulp.task('default', ['sass', 'slim', 'serve'], function() {
+gulp.task('default', ['sass', 'slim', 'js', 'serve'], function() {
   gulp.watch(src.css, ['sass']);
   gulp.watch(src.html, ['slim']);
+  gulp.watch(src.js, ['js']);
 });
