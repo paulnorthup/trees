@@ -13,7 +13,7 @@ Make sure you have node and gulp installed:
 
 `npm install`
 
-`gem install sass`
+`gem install sass slim` *Without the `slim` gem unhandled errors abound*
 
 ####Go nuts!
 Run `gulp` to get a server going with browser-sync reloading.
