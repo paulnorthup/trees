@@ -9,8 +9,6 @@ Make sure you have node and gulp installed:
 
 `brew install npm`
 
-`npm install -g gulp`
-
 ####Install your dependencies!
 
 `npm install`
