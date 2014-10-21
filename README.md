@@ -12,7 +12,10 @@ Make sure you have node and gulp installed:
 `npm install -g gulp`
 
 ####Install your dependencies!
+
 `npm install`
+
+'gem install sass'
 
 ####Go nuts!
 Run `gulp` to get a server going with browser-sync reloading.
