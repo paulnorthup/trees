@@ -3,6 +3,8 @@ var gulp = require('gulp'),
     slim = require('gulp-slim'),
     sass = require('gulp-ruby-sass'),
     plumber = require('gulp-plumber'),
+    concat = require('gulp-concat'),
+    uglify = require('gulp-uglify'),
     browserSync = require('browser-sync');
 
 // Helpers
