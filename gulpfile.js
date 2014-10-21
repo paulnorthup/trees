@@ -69,7 +69,8 @@ browserSync({
 });
 
 // Default to build, serve, and watch
-gulp.task('default', ['sass', 'slim', 'serve'], function() {
+gulp.task('default', ['sass', 'slim', 'js', 'serve'], function() {
   gulp.watch(src.css, ['sass']);
   gulp.watch(src.html, ['slim']);
+  gulp.watch(src.js, ['js']);
 });
