@@ -39,6 +39,15 @@ gulp.task('slim', function() {
   .pipe(reload({stream:true}));
 });
 
+// Process  javascripts
+gulp.task('js', function() {
+  gulp.src(mainBowerFiles().concat(src.js))
+  .pipe(filter('*.js'))
+  .pipe(concat('main.js'))
+  .pipe(uglify())
+  .pipe(gulp.dest(dest.js));
+})
+
 // Spin up a server
 gulp.task('serve', function() {
 browserSync({
