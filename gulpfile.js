@@ -49,7 +49,8 @@ gulp.task('js', function() {
   .pipe(filter('*.js'))
   .pipe(concat('main.js'))
   .pipe(uglify())
-  .pipe(gulp.dest(dest.js));
+  .pipe(gulp.dest(dest.js))
+  .pipe(reload({stream:true}));
 })
 
 // Spin up a server
