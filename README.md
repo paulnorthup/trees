@@ -13,6 +13,8 @@ Make sure you have node and gulp installed:
 
 `npm install`
 
+`bower install`
+
 `gem install sass slim` *Without the `slim` gem unhandled errors abound*
 
 ####Go nuts!
