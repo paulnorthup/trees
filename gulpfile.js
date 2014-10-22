@@ -19,13 +19,24 @@ var reload = browserSync.reload;
 var src = {
   'css': './lib/styles/*.scss',
   'js': './lib/js/**/*.js',
-  'html':'./lib/templates/*.slim'
+  'html': './lib/templates/*.slim',
 };
 var dest = {
   'css': './dist/css/',
   'js': './dist/js/',
   'html':'./dist'
 };
+
+// Process css out of bower
+gulp.task('bowerCSS', function() {
+  gulp.src(mainBowerFiles())
+  .pipe(filter('*.css', '!*.min.css'))
+  .pipe(concat('vendor.css'))
+  .pipe(rename({ suffix: '.min'}))
+  .pipe(minifycss())
+  .pipe(gulp.dest(dest.css))
+  .pipe(reload({stream:true}));
+});
 
 // Process sass
 gulp.task('sass', function() {
@@ -69,8 +80,9 @@ browserSync({
 });
 
 // Default to build, serve, and watch
-gulp.task('default', ['sass', 'slim', 'js', 'serve'], function() {
+gulp.task('default', ['bowerCSS', 'sass', 'slim', 'js', 'serve'], function() {
   gulp.watch(src.css, ['sass']);
   gulp.watch(src.html, ['slim']);
   gulp.watch(src.js, ['js']);
+  gulp.watch('bower_components', ['bowerCSS']);
 });
