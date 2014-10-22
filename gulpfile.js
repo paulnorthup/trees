@@ -42,7 +42,9 @@ gulp.task('bowerCSS', function() {
 gulp.task('sass', function() {
   gulp.src(src.css)
   .pipe(plumber())
-  .pipe(sass())
+  .pipe(sass({
+    'loadPath': './bower_components/zen-grids/stylesheets/'
+    }))
   .pipe(autoprefix('last 2 version'))
   .pipe(rename({ suffix: '.min' }))
   .pipe(minifycss())
