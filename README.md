@@ -1,4 +1,5 @@
 # Gulp Slim SASS Scaffold
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/paulnorthup/gulp-proto?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
  This will get a static site up and running and provide a basic framework from which to move forward.
 
