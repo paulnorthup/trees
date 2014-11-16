@@ -5,43 +5,31 @@ body {
  background: #f0f0f0;
 } 
 
+// Bring in grid/layout
 @import 'zen-grids';
 
-$zen-columns: 8;
-.container {
-  @include zen-grid-container();
-  .block-left {
-    @include zen-grid-item(3,1);
-    background: #ffc;
-    overflow: hidden;
-    .cats {
-      @include zen-new-row(left);
-      @include zen-grid-item(4,1);
-    }
-    .more-cats {
-      @include zen-new-row(left);
-      @include zen-grid-item(4,1);
-    }
-    .even-more-cats {
-      @include zen-new-row(left);
-      @include zen-grid-item(4,1);
-    }
-  }
-  .block-a {
-    @include zen-grid-item(4,1,right);
-    background: #cff;
-    overflow: hidden;
-  }
-  .block-b {
-    @include zen-new-row(right);
-    @include zen-grid-item(4,1,right);
-    background: #ffccff;
-  }
-  .block-c {
-    @include zen-new-row(right);
-    @include zen-grid-item(4,1,right);
-    background: orange;
-  }
+// Fonts
+@import url(http://fonts.googleapis.com/css?family=Gudea:700);
+
+// Colors
+$green: rgba(90, 154, 1, 1);
+
+// Base fonts
+$heading-font-family: 'Gudea', Helvetica, Arial, sans-serif;
+$default-font-family: Helvetica, Arial, sans-serif;
+
+h1, h2, h3, h4, h5 {
+  font-family: $heading-font-family;
 }
 
-@import 'partial';
+// Layout
+
+.wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+.container {
+  padding: 20px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
