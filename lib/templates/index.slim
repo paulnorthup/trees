@@ -10,19 +10,19 @@ html
         p this the header dog
     #main.wrapper
       .container
-        h1 We are tree fisting LIVE!
+        h2 Product offerings
         .tree-stage#ground-preparation
           img src="http://placekitten.com/235/235"
-          h2 Ground Preparation
-          .product-list
+          h3 Ground Preparation
+          .product-list.hide
             a href="#bedding-row-mapping"
               p Bedding row mapping
             a href="#stand-border-updates"
               p Stand border updates
         .tree-stage#silviculture
           img src="http://placekitten.com/235/235"
-          h2 Silviculture
-          .product-list
+          h3 Silviculture
+          .product-list.hide
             a href="#juvenile-density"
               p Juvenile density stratefication
             a href="#stand-border-updates"
@@ -43,8 +43,8 @@ html
               p Weeding maps
         .tree-stage#juvenile
           img src="http://placekitten.com/235/235"
-          h2 Juvenile
-          .product-list
+          h3 Juvenile
+          .product-list.hide
             a href="#juvenile-density"
               p Juvenile density stratefication
             a href="#gap-analysis"
@@ -55,8 +55,8 @@ html
               p Stand border updates
         .tree-stage#pruning-thinning
           img src="http://placekitten.com/235/235"
-          h2 Pruning/Thinning
-          .product-list
+          h3 Pruning/Thinning
+          .product-list.hide
             a href="#irow"
               p iRow
             a href="#gap-analysis"
@@ -65,8 +65,8 @@ html
               p Stand border updates
         .tree-stage#harvesting
           img src="http://placekitten.com/235/235"
-          h2 Harvesting
-          .product-list
+          h3 Harvesting
+          .product-list.hide
             a href="#wood-resource"
               p Wood resource mapping
             a href="species-identification"
@@ -77,6 +77,77 @@ html
               p Gap analysis
             a href="#stand-border-updates"
               p Stand border updates
+      h2 Description of services
+        .service-description#gap-analysis
+          h3 Gap analysis
+          p Intelescope gap analysis is a service aiming at supporting your assessment of utilizing non-planted areas within your stand, helping you make smarter stand maintenance decisions.
+          p The service is based on imagery captured from almost any commercial drone and utilizes Intelescope.
+          .features
+            p.strong Key features & benefits
+            ul
+              li Maps non-planted areas (polygons) according to classes determined by size
+              li Base your stand maintenance and utilization decisions on your entire forest stand area
+              li Operational in Australia and Brazil
+        .service-description#irow
+          h3 iRow
+          p Intelescope iROW is a service aimed to detect forest plantation rows and measure their lengthg, thereby enabling cost/effective row-sampling for accurate and consistent forest inventory.
+          p The service is based on imagery from satellite, aerial photography or Drones and utilizes Intelescope proprietary row detection algorithms.
+          .features
+            p.strong Key features & benefits
+            ul
+              li Detects plantation rows
+              li Segments planted rows into stocked and un-stocked segments
+              li Accuracy: ±5% of total length per forest stand (larger than 10 hectares)
+              li Operational in USA
+        .service-description#survivability-mapping
+          h3 Survivability mapping
+          p Utilizing Intelescopes proprietary tree detection algorithms, survivability mapping is a service aimed to provide tree count after plantation, pruning, thinning and field work done by contractors that impacts the stand’s tree count. Using Intelescope’s algorithms, you are able to get an exact stem count, thereby, reflecting the reality on the ground. This allows re-planting in areas where there has been mortality, thereby, improving the overall yield simply by maximizing the usage of the land- among others.
+          p The service is based on imagery captured from almost any commercial Drones.
+          .features
+            p.strong Key features & benefits
+            ul
+              li Maps and counts trees within a specific stand/sub-stand
+              li Verifies your contractor reports based on your entire forest stands area (census)
+              li Accuracy: ±5% stems per stand at 90% of stands (10 hectares or larger)
+              li Operational in Australia and Brazil
+        .service-description#stem-density
+          h3 Stem density mapper
+          p Intelescope stem density mapping is a service aimed to support your assessment of survivability and help you make smarter re-planting decisions.
+          p The service is based on imagery captured from almost any commercial Drones and utilizes Intelescopes proprietary tree detection algorithm.
+          .features
+            p.strong Key features & benefits
+            ul
+              li Maps stem density in a grid of 25meters X 25meters cells according to four classes
+              li Base you re-planting decisions on a full census of your stands’ stem densities
+              li Measure your survivability rates at detailed 0.0625 hectares sub-stand areas resolution
+              li Accuracy: ±10% at 90% of cells
+              li Operational in Australia
+        .service-description#weeds-mapper
+          h3 Weeds mapper
+          p Intelescope weeds mapping is a service aimed to support your assessment of forest weed control and help you make smarter herbicide applications decisions. Intelescope’s image analysis algorithms can automatically measure the difference between the general green (weeds) and the trees canopies, thereby classifying the weed patches in each forest stand. This enables cost effective differential application of herbicides to save costs while improving plants growth.
+          p The service is based on imagery captured from almost any commercial Drones and utilizes Intelescopes proprietary tree detection algorithm.
+          .features
+            p.strong Key features & benefits
+            ul
+              li Base your herbicide application decision on analysis of your entire forest stand area (census)
+              li Maps weeds coverage percentage in a grid of 50meters X 50meters cells according to 4 classes for aerial herbicide application
+              li Alternatively, each plantation row can also be classified according to weeds coverage for ground herbicide application
+              li Takes into consideration planted trees and ignores their canopies
+              li Accuracy: ±15% coverage at 90% of cells
+              li Operational in Australia and Brazil
+        .service-description#competition-mapper
+          h3 Competition mapper
+          p Intelescope competition mapping is a service aimed to support your assessment of cutting down non-crop competition trees, helping you make smarter stand maintenance decisions.
+          p The service is based on imagery captured from almost any commercial Drones and utilizes Intelescopes proprietary tree detection and row detection algorithms.
+          .features
+            p.strong Key features & benefits
+            ul
+              li Maps competition trees areas represented by polygons according to classes determined by intensity
+              li Base your competition tree removal decision on your entire forest stand area (census)
+              li Operational in Australia and Brazil
+
+
+proprietary tree and row detection algorithms.
     aside.wrapper
       .container
         p this is an aside here
