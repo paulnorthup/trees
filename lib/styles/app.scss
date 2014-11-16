@@ -1,28 +1,13 @@
-* {
-  font-family: sans-serif;
-}
+@import 'variables';
+@import 'typography';
+
+// Base styles
 body {
  background: #f0f0f0;
 } 
 
 // Bring in grid/layout
 @import 'zen-grids';
-
-// Fonts
-@import url(http://fonts.googleapis.com/css?family=Gudea:700);
-
-// Colors
-$green: rgba(90, 154, 1, 1);
-
-// Base fonts
-$heading-font-family: 'Gudea', Helvetica, Arial, sans-serif;
-$default-font-family: Helvetica, Arial, sans-serif;
-
-h1, h2, h3, h4, h5 {
-  font-family: $heading-font-family;
-}
-
-// Layout
 
 .wrapper {
   overflow: hidden;

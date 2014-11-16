@@ -1,0 +1,81 @@
+@import url(http://fonts.googleapis.com/css?family=Gudea:700);
+$heading-font-family: 'Gudea', Helvetica, Arial, sans-serif;
+$default-font-family: Helvetica, Arial, sans-serif;
+$line-height: 1.333em;
+
+html { font-size: 62.5% !important; } // Set on html as percentage to ensure rems work
+
+// The font sizes (rembase: 10px)
+$h1-font-size: 3.2rem !default; // 3.6rem = 36px (rembase is 10, they're all like this)
+$h2-font-size: 2.4rem !default;
+$h3-font-size: 2.0rem !default;
+$h4-font-size: 1.6rem !default;
+$h5-font-size: 1.4rem !default;
+$h6-font-size: 1.2rem !default;
+
+$p-font-size: 1.8rem !default;
+$input-font-size: $h4-font-size;
+
+// The amount lists and blockquotes are indented.
+$indent-amount: 40px !default;
+
+body {
+  font-size: $p-font-size;
+  font-family: $default-font-family;
+  * {
+    line-height: $line-height;
+  }
+}
+
+/*
+Generic Styles
+**************/
+
+// Standard Elements
+p, table, summary, details, pre, blockquote, dl, dd, dt, input {
+  font-size: $p-font-size;
+}
+
+p {
+  margin-top: 0;
+  font-weight: 300;
+}
+
+// Links
+a {
+  font-size: inherit;
+}
+
+code {
+  display: inline-block;
+  background: white;
+  border-radius: 3px;
+  padding: 0 3px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+/*
+Headings
+********/
+h1, h2, h3, h4, h5 {
+  font-family: $heading-font-family;
+  line-height: $line-height;
+  margin: 2rem 0 1rem 0;
+  font-weight: 400;
+}
+// Variable driven font declarations (edit above)
+h1 { font-size: $h1-font-size; }
+h2 { font-size: $h2-font-size; }
+h3 { font-size: $h3-font-size; }
+h4 { font-size: $h4-font-size; }
+h5 { font-size: $h5-font-size; }
+
+// Support classes
+.h1 { @extend h1; } 
+.h2 { @extend h2; } 
+.h3 { @extend h3; } 
+.h4 { @extend h4; } 
+.h5 { @extend h5; } 
+.h1, .h2, .h3, .h4, .h5 {
+  margin: 0;
+}
