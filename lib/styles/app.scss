@@ -39,3 +39,7 @@ $zen-columns: 5;
 #harvesting {
   @include zen-grid-item(1,5);
 }
+
+#services {
+  @include zen-new-row();
+}
