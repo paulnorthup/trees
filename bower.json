@@ -17,6 +17,7 @@
   "dependencies": {
     "normalize.css": "~3.0.2",
     "zen-grids": "~2.0.0-beta.3",
-    "jquery": "~2.1.1"
+    "jquery": "~2.1.1",
+    "jquery-smooth-scroll": "~1.5.3"
   }
 }
