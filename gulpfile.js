@@ -10,7 +10,8 @@ var gulp = require('gulp'),
     minifycss = require('gulp-minify-css'),
     autoprefix = require('gulp-autoprefixer'),
     uglify = require('gulp-uglify'),
-    browserSync = require('browser-sync');
+    browserSync = require('browser-sync'),
+    img = require('gulp-image');
 
 // Helpers
 var reload = browserSync.reload;
@@ -20,11 +21,13 @@ var src = {
   'css': './lib/styles/*.scss',
   'js': './lib/js/**/*.js',
   'html': './lib/templates/*.slim',
+  'img': './lib/images/*'
 };
 var dest = {
   'css': './dist/css/',
   'js': './dist/js/',
-  'html':'./dist'
+  'html':'./dist',
+  'img':'./dist/assets/images/'
 };
 
 // Process css out of bower
@@ -73,6 +76,14 @@ gulp.task('js', function() {
   .pipe(reload({stream:true}));
 })
 
+// Process images
+gulp.task('img', function() {
+  gulp.src(src.img)
+  .pipe(plumber())
+  .pipe(img())
+  .pipe(gulp.dest(dest.img));
+});
+
 // Spin up a server
 gulp.task('serve', function() {
 browserSync({
@@ -83,7 +94,7 @@ browserSync({
 });
 
 // Default to build, serve, and watch
-gulp.task('default', ['bowerCSS', 'sass', 'slim', 'js', 'serve'], function() {
+gulp.task('default', ['img', 'bowerCSS', 'sass', 'slim', 'js', 'serve'], function() {
   gulp.watch(src.css, ['sass']);
   gulp.watch(src.html, ['slim']);
   gulp.watch(src.js, ['js']);

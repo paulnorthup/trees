@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "bower install"
   },
   "author": "",
   "license": "ISC",
@@ -14,6 +14,7 @@
     "gulp-autoprefixer": "^1.0.1",
     "gulp-concat": "^2.4.1",
     "gulp-filter": "^1.0.2",
+    "gulp-image": "^0.5.1",
     "gulp-jade": "^0.9.0",
     "gulp-minify-css": "^0.3.11",
     "gulp-plumber": "^0.6.6",
@@ -24,8 +25,5 @@
   },
   "dependencies": {
     "gulp-slim": "0.0.10"
-  },
-  "scripts": {
-    "postinstall": "bower install"
   }
 }
