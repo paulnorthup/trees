@@ -65,6 +65,7 @@ gulp.task('slim', function() {
 // Process  javascripts
 gulp.task('js', function() {
   gulp.src(mainBowerFiles().concat(src.js))
+  .pipe(plumber())
   .pipe(filter('*.js'))
   .pipe(concat('main.js'))
   .pipe(uglify())

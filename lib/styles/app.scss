@@ -18,3 +18,24 @@ body {
   max-width: 1200px;
   margin: 0 auto;
 }
+
+.hide {
+  display: none;
+}
+$zen-columns: 5;
+
+#ground-preparation {
+  @include zen-grid-item(1,1);
+}
+#silviculture {
+  @include zen-grid-item(1,2);
+}
+#juvenile {
+  @include zen-grid-item(1,3);
+}
+#pruning-thinning {
+  @include zen-grid-item(1,4);
+}
+#harvesting {
+  @include zen-grid-item(1,5);
+}
