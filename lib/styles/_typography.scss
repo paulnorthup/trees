@@ -36,7 +36,7 @@ p, table, summary, details, pre, blockquote, dl, dd, dt, input {
   font-size: $p-font-size;
 }
 
-p {
+p, a, li {
   margin-top: 0;
   font-weight: 300;
 }

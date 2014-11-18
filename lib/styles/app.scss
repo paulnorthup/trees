@@ -8,6 +8,7 @@
   overflow: hidden;
   width: 100%;
   clear: both;
+  padding: 20px 0;
 }
 .container {
   max-width: 1200px;
@@ -53,7 +54,22 @@ header {
   float: left;
   overflow: hidden;
   margin: 10px;
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 1239px) and (min-width:1000px) {
+    &:nth-child(6) {
+      clear: left;
+    }
+  }
+  @media screen and (max-width: 999px) and (min-width:760px) {
+    &:nth-child(5) {
+      clear: left;
+    }
+  }
+  @media screen and (max-width: 759px) and (min-width:520px) {
+    &:nth-child(4), &:nth-child(6) {
+      clear: left;
+    }
+  }
+  @media screen and (max-width: 519px) {
     width: 80%;
   }
 
