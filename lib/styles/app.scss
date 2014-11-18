@@ -1,11 +1,6 @@
 @import 'variables';
 @import 'typography';
 
-// Base styles
-body {
- background: #f0f0f0;
-} 
-
 // Bring in grid/layout
 @import 'zen-grids';
 
@@ -15,25 +10,79 @@ body {
   clear: both;
 }
 .container {
-  padding: 20px 0;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
+  @media screen and (max-width: 500px) {
+    padding: 5px 10px;
+  }
 }
 
 .hide {
   display: none;
 }
-$zen-columns: 5;
 
+// Header
+header {
+  background: url('../assets/images/trees.jpg') top center no-repeat;
+  background-color: white;
+  h1 {
+    padding-left: 10px;
+  }
+  @media screen and (max-width: 500px) {
+    height: 60px;
+    h1 {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    img {
+      height: 50px;
+    }
+  }
+}
+
+// Main
+#main {
+ background: #f0f0f0;
+ }
+
+// Tree stage cards
 .tree-stage {
   width: 220px;
   float: left;
+  overflow: hidden;
   margin: 10px;
   @media screen and (max-width: 500px) {
     width: 80%;
   }
+
+  // Titles
+  h3 {
+    background: $green;
+    color: white;
+    padding: 5px;
+    margin: -5px 0 0 0;
+  }
+  
+  // Product list
+  .product-list {
+    background: $green20;
+    font-size: 14px;
+    padding: 5px;
+    a {
+      color: inherit;
+      font-size: 16px;
+    }
+  }
 }
 
+// Aside
 aside {
   clear: left;
+  h3 {
+    margin-top: 60px;
+    padding: 5px;
+    margin-bottom: 0;
+  }
 }
