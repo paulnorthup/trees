@@ -78,8 +78,14 @@ header {
     width: 80%;
   }
 
+  // Image
+  h3 {
+    cursor:pointer;
+  }
+
   // Titles
   h3 {
+    cursor: pointer;
     background: $green;
     color: white;
     padding: 5px;
