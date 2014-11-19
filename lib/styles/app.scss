@@ -79,7 +79,7 @@ header {
   }
 
   // Image
-  h3 {
+  img {
     cursor:pointer;
   }
 
@@ -94,13 +94,43 @@ header {
   
   // Product list
   .product-list {
-    background: $green20;
     font-size: 14px;
-    padding: 5px;
     a {
       color: inherit;
       font-size: 16px;
+      padding: 10px 2px;
+      border-bottom: 1px solid $green;
+      display:block;
+      text-decoration: none;
+
+      &:hover {
+        background: $green20;
+      }
     }
+  }
+}
+
+// Comeback arrow
+.comeback-button {
+  width: 60px;
+  height: 60px;
+  background: rgba(0,0,0,0.5);
+  display: block;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  &:before {
+    content: "^";
+    color: #fff;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 90px;
+    text-align: center;
+    width: 60px;
   }
 }
 
