@@ -80,12 +80,13 @@ header {
     }
   }
   @media screen and (max-width: 519px) {
-    width: 80%;
+    width: 95%;
   }
 
   // Image
   img {
     cursor:pointer;
+    width: 100%;
   }
 
   // Titles
