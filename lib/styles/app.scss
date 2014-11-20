@@ -26,6 +26,7 @@
 // Header
 header {
   background: url('../assets/images/trees.jpg') top center no-repeat;
+  background-size: cover;
   background-color: white;
   h1 {
     text-align: center;
@@ -91,7 +92,7 @@ header {
     padding: 5px;
     margin: -5px 0 0 0;
   }
-  
+
   // Product list
   .product-list {
     font-size: 14px;
