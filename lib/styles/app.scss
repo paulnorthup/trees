@@ -144,6 +144,13 @@ aside {
     padding: 5px;
     margin-bottom: 0;
   }
+  img {
+    max-width: 600px;
+    max-height: 360px;
+    @media screen and (max-width: 559px) {
+      width: 100%;
+    }
+  }
 }
 
 .service-description {
