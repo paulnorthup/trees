@@ -1,0 +1,44 @@
+.Media {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1em;
+}
+
+.Media-figure {
+  margin-right: 1em;
+}
+
+.Media-body {
+  flex: 1 0 0;
+  order: 1;
+  &, & :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.Media-aside {
+ margin-left: 1em;
+ order: 2;
+}
+
+.Media--center {
+  align-items: center;
+}
+
+.Media--reverse {
+  & > .Media-figure {
+    order: 2;
+    margin: 0 0 0 1em;
+  }
+  & > .Media-aside {
+    order: 0;
+    margin: 0 1em 0 0;
+  }
+}
+
+@media screen and (max-width: 649px) {
+  .Media ,.Media-body, .Media-figure, .Media-aside {
+    display: block !important;
+    order: 1;
+  }
+}

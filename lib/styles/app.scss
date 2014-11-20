@@ -1,5 +1,6 @@
 @import 'variables';
 @import 'typography';
+@import 'media';
 
 // Bring in grid/layout
 @import 'zen-grids';
@@ -143,4 +144,7 @@ aside {
     padding: 5px;
     margin-bottom: 0;
   }
+}
+
+.service-description {
 }
